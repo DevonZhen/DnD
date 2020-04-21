@@ -1,0 +1,19 @@
+#mainnavbar{
+    background-color: rgb(153, 110, 61) !important;
+    height:60px;
+    max-height: 60px;
+     
+}
+.navbar-brand #logo{
+    width: 120px;
+    color: rgb(206, 26, 26);
+}
+a{
+    color: black;
+    font-family: 'Rubik';
+    
+    outline: none;
+}
+#navbarNavAltMarkup{
+    visibility: hidden;
+}

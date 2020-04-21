@@ -1,0 +1,190 @@
+[
+    {
+       "id":1,
+       "username":"Devon",
+       "password":"devon123",
+       "email":"devon@gmail.com",
+       "birthday":1586664000000,
+       "country":"United States",
+       "statusId":1,
+       "characterList":[
+          {
+             "id":2,
+             "name":"Mullen",
+             "genderId":1,
+             "raceId":1,
+             "classId":1,
+             "origin":"Florenle",
+             "accId":2,
+             "bagList":[
+                {
+                   "id":1,
+                   "bagName":"Blue Bag",
+                   "bagSize":12,
+                   "charId":2,
+                   "itemList":[
+                      {
+                         "id":1,
+                         "name":"Sword",
+                         "cost":12,
+                         "desc":"A rusty sword",
+                         "bagId":1
+                      },
+                      {
+                         "id":2,
+                         "name":"Health Potion",
+                         "cost":1,
+                         "desc":"Drink to heal yourself",
+                         "bagId":1
+                      }
+                   ]
+                },
+                {
+                   "id":2,
+                   "bagName":"Green Bag",
+                   "bagSize":24,
+                   "charId":2,
+                   "itemList":[
+                      {
+                         "id":3,
+                         "name":"Health Potion",
+                         "cost":1,
+                         "desc":"Drink to heal yourself",
+                         "bagId":2
+                      },
+                      {
+                         "id":4,
+                         "name":"Diamond",
+                         "cost":999,
+                         "desc":"A special shiny ore that can be sold or used",
+                         "bagId":2
+                      },
+                      {
+                         "id":5,
+                         "name":"Bread",
+                         "cost":5,
+                         "desc":"Fresh Baked Deliciousness",
+                         "bagId":2
+                      }
+                   ]
+                }
+             ],
+             "skillsList":[
+                {
+                   "id":5,
+                   "skillName":"Quick Strike",
+                   "skillDamage":3,
+                   "skillCost":1,
+                   "skillType":"Physical"
+                },
+                {
+                   "id":6,
+                   "skillName":"Heavy Strike",
+                   "skillDamage":5,
+                   "skillCost":2,
+                   "skillType":"Physical"
+                },
+                {
+                   "id":7,
+                   "skillName":"Blade Furry",
+                   "skillDamage":8,
+                   "skillCost":6,
+                   "skillType":"Physical"
+                },
+                {
+                   "id":8,
+                   "skillName":"Double Strike",
+                   "skillDamage":10,
+                   "skillCost":7,
+                   "skillType":"Physical"
+                }
+             ]
+          },
+          {
+             "id":3,
+             "name":"Lowe",
+             "genderId":2,
+             "raceId":2,
+             "classId":2,
+             "origin":"Oreese",
+             "accId":3,
+             "bagList":[
+                {
+                   "id":3,
+                   "bagName":"Green Bag",
+                   "bagSize":24,
+                   "charId":3,
+                   "itemList":[
+                      {
+                         "id":6,
+                         "name":"Bread",
+                         "cost":5,
+                         "desc":"Fresh Baked Deliciousness",
+                         "bagId":3
+                      },
+                      {
+                         "id":7,
+                         "name":"Apple",
+                         "cost":3,
+                         "desc":"Right off the tree",
+                         "bagId":3
+                      }
+                   ]
+                },
+                {
+                   "id":4,
+                   "bagName":"Red Bag",
+                   "bagSize":48,
+                   "charId":3,
+                   "itemList":[
+                      {
+                         "id":8,
+                         "name":"Clock",
+                         "cost":16,
+                         "desc":"Tells time",
+                         "bagId":4
+                      },
+                      {
+                         "id":9,
+                         "name":"Dagger",
+                         "cost":36,
+                         "desc":"Quick and Silent",
+                         "bagId":4
+                      }
+                   ]
+                }
+             ],
+             "skillsList":[
+                {
+                   "id":1,
+                   "skillName":"Firebolt",
+                   "skillDamage":5,
+                   "skillCost":0,
+                   "skillType":"Magic"
+                },
+                {
+                   "id":2,
+                   "skillName":"Icebolt",
+                   "skillDamage":2,
+                   "skillCost":0,
+                   "skillType":"Magic"
+                },
+                {
+                   "id":3,
+                   "skillName":"Thunderbolt",
+                   "skillDamage":7,
+                   "skillCost":3,
+                   "skillType":"Magic"
+                },
+                {
+                   "id":4,
+                   "skillName":"Water Blast",
+                   "skillDamage":3,
+                   "skillCost":2,
+                   "skillType":"Magic"
+                }
+             ]
+          }
+       ]
+    }
+ ]

@@ -1,0 +1,8 @@
+[
+    {"id":1,"type":"Human"},
+    {"id":2,"type":"Elf"},
+    {"id":3,"type":"Dwarf"},
+    {"id":4,"type":"Orc"},
+    {"id":5,"type":"Dragonkin"},
+    {"id":6,"type":"Wolvekins"}
+]

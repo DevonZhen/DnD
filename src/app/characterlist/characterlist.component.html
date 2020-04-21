@@ -1,0 +1,41 @@
+<div class="container-fluid text-center" style="margin-top: 60px;">
+    <h1>Character List</h1>
+</div>
+<br>
+<div class="container-fluid">
+    <div class="row" >
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+            <div class="row text-center">
+                <div class="col-lg-4"><mat-card><mat-card-title>Character 1</mat-card-title></mat-card></div>
+                <div class="col-lg-4"><mat-card><mat-card-title>Character 2</mat-card-title></mat-card></div>
+                <div class="col-lg-4"><mat-card><mat-card-title>Character 3</mat-card-title></mat-card></div>
+            </div>
+        </div>
+        <div class="col-lg-2"></div> 
+    </div>
+</div>
+<br>
+<div class="container-fluid">
+    <div class="row text-center" >
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+            <mat-card style="width: 500px;">
+                <mat-card-title>[Character Name]</mat-card-title>
+                <img mat-card-image style="width: 50%; height: 300px;"><br><br>
+                <mat-card-content>
+                    <div class="row">
+                        <div class="col-lg-6"><h5>Gender: [Gender]</h5><br><h5>Class: [Class]</h5></div>
+                        <div class="col-lg-6"><h5>Race: [Race]</h5><br><h5>Origin: [Origin]</h5></div>
+                    </div>
+                </mat-card-content>
+                <mat-card-actions>
+                    <a routerLink="/skills"><button class="btn btn-success" type="button">Skills</button></a> &nbsp;&nbsp;&nbsp;&nbsp;
+                    <a routerLink="/characters"><button class="btn btn-success" type="button">About</button></a> &nbsp;&nbsp;&nbsp;&nbsp;
+                    <a routerLink="/items"><button class="btn btn-success" type="button">Items</button></a>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+</div>

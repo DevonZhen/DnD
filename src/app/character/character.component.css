@@ -1,0 +1,9 @@
+hr{
+    height: 1px;
+    background: linear-gradient(to right, #2a830e, #10ec2d);
+}
+
+mat-card {
+    border-bottom-style: solid;
+    border-bottom-color: coral;
+}

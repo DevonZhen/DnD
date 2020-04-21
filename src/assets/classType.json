@@ -1,0 +1,8 @@
+[
+    {"id":1,"type":"Warrior"},
+    {"id":2,"type":"Mage"},
+    {"id":3,"type":"Archer"},
+    {"id":4,"type":"Paladin"},
+    {"id":5,"type":"Rogue"},
+    {"id":6,"type":"Priest"}
+]
