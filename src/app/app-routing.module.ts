@@ -8,6 +8,7 @@ import { ItemsComponent } from './items/items.component';
 import { AccountComponent } from './account/account.component';
 import { LoginComponent } from'./login/login.component';
 import { CharacterlistComponent } from './characterlist/characterlist.component';
+import { SkillsComponent } from './skills/skills.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
@@ -16,7 +17,10 @@ const routes: Routes = [
   { path: 'bag', component: BagComponent},
   { path: 'login', component: LoginComponent},
   { path: 'characterslist', component: CharacterlistComponent},
-  { path: 'characters', component: CharacterComponent},
+  { path: 'character', component: CharacterComponent},
+  { path: 'character/:name', component: CharacterComponent},
+  { path: 'skills', component: SkillsComponent},
+  { path: 'skills/:name', component: SkillsComponent},
   { path: 'items', component: ItemsComponent},
   { path: 'account', component: AccountComponent},
   { path: 'login', component: LoginComponent},

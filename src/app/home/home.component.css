@@ -2,7 +2,7 @@ hr{
     height: 1px;
     background: linear-gradient(to right, #e45300, #c05208);
 }
-#a button{
+button{
     text-decoration: none;
     outline: none;
 }
