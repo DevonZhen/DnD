@@ -1,7 +1,9 @@
 <div class="container-fluid text-center" style="margin-top: 60px;"></div>
 <div style="background-color: blanchedalmond; min-height:94vh">
 <div class="container-fluid">
-    <h1 class="text-center">Name's Skills</h1>
+    <ng-container *ngFor="let ch of events.characterList">
+        <h1 class="text-center">{{ch.name}}'s Skills</h1>
+    </ng-container>
     <div class="row">
         <div class="col-lg-2"></div>
         <div class="col-lg-8">
