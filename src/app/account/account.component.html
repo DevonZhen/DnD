@@ -20,9 +20,9 @@
                         </mat-form-field>
                     </div>
                     <div class="col-lg-4">
-                        <mat-form-field class="full-width" >
-                            <mat-label>Password</mat-label>
-                            <input matInput formControlName="password" required autocomplete="off">
+                        <mat-form-field class="full-width" id="password">
+                            <input matInput id="password" type="password" placeholder="Password" formControlName="password" autocomplete="off" showHideInput >
+                            <i class="material-icons" matSuffix showHideTrigger="password" [showHideStatus]="{ materialIcon: true, id: 'password' }"></i>
                         </mat-form-field>
                     </div>
                     <div class="col-lg-4">

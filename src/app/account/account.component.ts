@@ -107,12 +107,14 @@ export class AccountComponent implements OnInit {
             duration: 5000,
             panelClass: ['mat-toolbar', 'mat-primary'] // 'mat-accent' or 'mat-warn'
           });
+          this.route.navigate(['/home']);
         } 
         else {
           this.snack.open("Account Data Saved But Not Returned", 'close',  {
             duration: 5000,
             panelClass: ['mat-toolbar', 'mat-warn'] // 'mat-accent' or 'mat-warn'
           });
+          this.route.navigate(['/home']);
         }
        console.log("POST Request is successful ", data);
       },
