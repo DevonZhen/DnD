@@ -1,24 +1,25 @@
 <nav class="shadow-sm navbar navbar-expand-lg fixed-top navbar-light bg-light" id="mainnavbar">
     <a class="navbar-brand" routerLink="home"><i class="fab fa-d-and-d fa-2x" id="logo"></i></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header" aria-controls="header" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+    <div class="collapse navbar-collapse justify-content-center" *ngIf="currentStatus">
       <div class="navbar-nav">
         <a class="nav-item" routerLink="home" >Home</a> &nbsp;&nbsp;
         <a class="nav-item" routerLink="characterslist" >Characters</a> &nbsp;&nbsp;
-        <a class="nav-item" routerLink="bag" >Bag</a> &nbsp;&nbsp;
+        <a class="nav-item" routerLink="bag" >Bags</a> &nbsp;&nbsp;
         <a class="nav-item" routerLink="items" >Items</a> &nbsp;&nbsp;
         <a class="nav-item" routerLink="account" >Account</a> &nbsp;&nbsp;
-
       </div>
-
     </div>
-
+    <div class="collapse navbar-collapse justify-content-center" *ngIf="!currentStatus">
+      <div class="navbar-nav">
+      </div>
+    </div>
     <div>
-      <a routerLink="/login"><button class="btn btn-success" type="button">Login</button></a> &nbsp;
-      <a routerLink="home"><button class="btn btn-success" type="button" (click)="signOut()" value="SignOut" *ngIf="updateFlag==true">Register</button></a>
-      <a routerLink="home"><button class="btn btn-success" type="button" (click)="signOut()" value="SignOut" *ngIf="updateFlag==false">Sign Out</button></a>
+      <a routerLink="login" id="loginButton"><button class="btn btn-success" type="button" *ngIf="!currentStatus" >Login</button></a>
+      <a routerLink="account" id="registerButton"><button class="btn btn-success" type="button" *ngIf="!currentStatus">Register</button></a>
+      <a routerLink="home"><button class="btn btn-success" type="button" (click)="signOut()" *ngIf="currentStatus">Sign Out</button></a>
     </div>
  
   </nav>

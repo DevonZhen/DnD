@@ -1,0 +1,58 @@
+{
+  "id":null,
+  "username":null,
+  "password":null,
+  "email":null,
+  "birthday":null,
+  "firstName":null,
+  "lastName":null,
+  "country":null,
+  "statusId":null,
+  "characterList":[
+     {
+        "id":2,
+        "name":"Mullen",
+        "genderId":1,
+        "raceId":1,
+        "classId":1,
+        "origin":"Florenle",
+        "accId":2,
+        "bagList":[
+
+        ],
+        "skillsList":[
+
+        ]
+     },
+     {
+        "id":3,
+        "name":"Lowe",
+        "genderId":2,
+        "raceId":2,
+        "classId":2,
+        "origin":"Oreese",
+        "accId":3,
+        "bagList":[
+
+        ],
+        "skillsList":[
+
+        ]
+     },
+     {
+        "id":4,
+        "name":"Thor",
+        "genderId":1,
+        "raceId":5,
+        "classId":4,
+        "origin":"Lokvor",
+        "accId":4,
+        "bagList":[
+
+        ],
+        "skillsList":[
+
+        ]
+     }
+  ]
+}

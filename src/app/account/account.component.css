@@ -2,7 +2,22 @@ hr{
     height: 1px;
     background: linear-gradient(to right, #1371ca, #08adee);
 }
-mat-card{
-background-color: blanchedalmond;
-
+mat-form-field{
+ width:200px;
+}
+button{
+    text-decoration: none;
+    outline: none;
+}
+#update{
+    background-color: rgb(48, 74, 219);
+color: #fff;
+}
+#reset{
+    background-color: green;
+    color: #fff;
+}
+#Delete{
+    background-color: red;
+    font-size: medium;
 }

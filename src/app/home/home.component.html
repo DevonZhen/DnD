@@ -1,15 +1,14 @@
 <div class="container-fluid text-center" style="margin-top: 60px;"></div>
-
-<div>
-<div class="container-fluid text-center animated bounce -delay-5s" style="position: absolute;" id="welcome" ><br><h1>Please Login to Your Account</h1></div>
-<div class="container-fluid" id="mainBody">
+<div style="background-color: blanchedalmond; min-height:94vh">
+<div class="container-fluid text-center animated bounce -delay-5s" style="position: absolute;" id="welcome" *ngIf="!display"><br><h1>Please Login to Your Account</h1></div>
+<div class="container-fluid" id="mainBody" *ngIf="display">
     <div class="text-center"><h1> Hello {{username}}!</h1></div><br>
     <div class="row ">
         <div class="col-lg-2"></div>
         <div class="col-lg-8" >
             <div class="row text-center">
-                <div class="col-lg-4"><a routerLink="/characters"><button mat-raised-button color="primary">Show Characters</button></a></div>
-                <div class="col-lg-4"><a routerLink="/characters"><button mat-raised-button color="primary">Create Character</button></a></div>
+                <div class="col-lg-4"><a routerLink="/characterslist"><button mat-raised-button color="primary">Show Characters</button></a></div>
+                <div class="col-lg-4"><a routerLink="/character"><button mat-raised-button color="primary">Create Character</button></a></div>
                 <div class="col-lg-4"><a routerLink="/account"><button mat-raised-button color="primary">Account Settings</button></a></div>
             </div>
         </div>
@@ -18,11 +17,10 @@
     <br>
     <div class="row ">
         <div class="col-lg-2"></div>
-        <div class="col-lg-8" style=" height: 75vh;">
+        <div class="col-lg-8" style="height: 75vh;">
            <img src="assets/images/logo.jpg" style="width:auto; height:75vh; right: 35px; position: relative;">
         </div>
         <div class="col-lg-2"></div>
     </div>
 </div>
-
 </div>

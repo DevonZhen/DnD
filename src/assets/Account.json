@@ -1,0 +1,11 @@
+{
+    "id":1,
+    "username":"Devonzhen",
+    "password":"devon123",
+    "email":"devon@gmail.com",
+    "firstName":"Devon",
+    "lastName":"Zhen",
+    "birthday":1586664000000,
+    "country":"United States",
+    "statusId":1 
+}

@@ -1,190 +1,380 @@
 [
-    {
-       "id":1,
-       "username":"Devon",
-       "password":"devon123",
-       "email":"devon@gmail.com",
-       "birthday":1586664000000,
-       "country":"United States",
-       "statusId":1,
-       "characterList":[
-          {
-             "id":2,
-             "name":"Mullen",
-             "genderId":1,
-             "raceId":1,
-             "classId":1,
-             "origin":"Florenle",
-             "accId":2,
-             "bagList":[
-                {
-                   "id":1,
-                   "bagName":"Blue Bag",
-                   "bagSize":12,
-                   "charId":2,
-                   "itemList":[
-                      {
-                         "id":1,
-                         "name":"Sword",
-                         "cost":12,
-                         "desc":"A rusty sword",
-                         "bagId":1
-                      },
-                      {
-                         "id":2,
-                         "name":"Health Potion",
-                         "cost":1,
-                         "desc":"Drink to heal yourself",
-                         "bagId":1
-                      }
-                   ]
-                },
-                {
-                   "id":2,
-                   "bagName":"Green Bag",
-                   "bagSize":24,
-                   "charId":2,
-                   "itemList":[
-                      {
-                         "id":3,
-                         "name":"Health Potion",
-                         "cost":1,
-                         "desc":"Drink to heal yourself",
-                         "bagId":2
-                      },
-                      {
-                         "id":4,
-                         "name":"Diamond",
-                         "cost":999,
-                         "desc":"A special shiny ore that can be sold or used",
-                         "bagId":2
-                      },
-                      {
-                         "id":5,
-                         "name":"Bread",
-                         "cost":5,
-                         "desc":"Fresh Baked Deliciousness",
-                         "bagId":2
-                      }
-                   ]
-                }
-             ],
-             "skillsList":[
-                {
-                   "id":5,
-                   "skillName":"Quick Strike",
-                   "skillDamage":3,
-                   "skillCost":1,
-                   "skillType":"Physical"
-                },
-                {
-                   "id":6,
-                   "skillName":"Heavy Strike",
-                   "skillDamage":5,
-                   "skillCost":2,
-                   "skillType":"Physical"
-                },
-                {
-                   "id":7,
-                   "skillName":"Blade Furry",
-                   "skillDamage":8,
-                   "skillCost":6,
-                   "skillType":"Physical"
-                },
-                {
-                   "id":8,
-                   "skillName":"Double Strike",
-                   "skillDamage":10,
-                   "skillCost":7,
-                   "skillType":"Physical"
-                }
-             ]
-          },
-          {
-             "id":3,
-             "name":"Lowe",
-             "genderId":2,
-             "raceId":2,
-             "classId":2,
-             "origin":"Oreese",
-             "accId":3,
-             "bagList":[
-                {
-                   "id":3,
-                   "bagName":"Green Bag",
-                   "bagSize":24,
-                   "charId":3,
-                   "itemList":[
-                      {
-                         "id":6,
-                         "name":"Bread",
-                         "cost":5,
-                         "desc":"Fresh Baked Deliciousness",
-                         "bagId":3
-                      },
-                      {
-                         "id":7,
-                         "name":"Apple",
-                         "cost":3,
-                         "desc":"Right off the tree",
-                         "bagId":3
-                      }
-                   ]
-                },
-                {
-                   "id":4,
-                   "bagName":"Red Bag",
-                   "bagSize":48,
-                   "charId":3,
-                   "itemList":[
-                      {
-                         "id":8,
-                         "name":"Clock",
-                         "cost":16,
-                         "desc":"Tells time",
-                         "bagId":4
-                      },
-                      {
-                         "id":9,
-                         "name":"Dagger",
-                         "cost":36,
-                         "desc":"Quick and Silent",
-                         "bagId":4
-                      }
-                   ]
-                }
-             ],
-             "skillsList":[
-                {
-                   "id":1,
-                   "skillName":"Firebolt",
-                   "skillDamage":5,
-                   "skillCost":0,
-                   "skillType":"Magic"
-                },
-                {
-                   "id":2,
-                   "skillName":"Icebolt",
-                   "skillDamage":2,
-                   "skillCost":0,
-                   "skillType":"Magic"
-                },
-                {
-                   "id":3,
-                   "skillName":"Thunderbolt",
-                   "skillDamage":7,
-                   "skillCost":3,
-                   "skillType":"Magic"
-                },
-                {
-                   "id":4,
-                   "skillName":"Water Blast",
-                   "skillDamage":3,
-                   "skillCost":2,
-                   "skillType":"Magic"
-                }
-             ]
-          }
-       ]
-    }
- ]
+   {
+      "id":1,
+      "username":"Devon",
+      "password":"devon123",
+      "email":"devon@gmail.com",
+      "birthday":1586664000000,
+      "country":"United States",
+      "statusId":1,
+      "characterList":[
+         {
+            "id":2,
+            "name":"Mullen",
+            "genderId":1,
+            "raceId":1,
+            "classId":1,
+            "origin":"Florenle",
+            "accId":2,
+            "bagList":[
+               {
+                  "id":1,
+                  "bagName":"Blue Bag",
+                  "bagSize":12,
+                  "charId":2,
+                  "itemList":[
+                     {
+                        "id":1,
+                        "name":"Sword",
+                        "cost":12,
+                        "desc":"A rusty sword",
+                        "bagId":1
+                     },
+                     {
+                        "id":2,
+                        "name":"Health Potion",
+                        "cost":1,
+                        "desc":"Drink to heal yourself",
+                        "bagId":1
+                     }
+                  ]
+               },
+               {
+                  "id":2,
+                  "bagName":"Green Bag",
+                  "bagSize":24,
+                  "charId":2,
+                  "itemList":[
+                     {
+                        "id":3,
+                        "name":"Health Potion",
+                        "cost":1,
+                        "desc":"Drink to heal yourself",
+                        "bagId":2
+                     },
+                     {
+                        "id":4,
+                        "name":"Diamond",
+                        "cost":999,
+                        "desc":"A special shiny ore that can be sold or used",
+                        "bagId":2
+                     },
+                     {
+                        "id":5,
+                        "name":"Bread",
+                        "cost":5,
+                        "desc":"Fresh Baked Deliciousness",
+                        "bagId":2
+                     }
+                  ]
+               }
+            ],
+            "skillsList":[
+               {
+                  "id":5,
+                  "skillName":"Quick Strike",
+                  "skillDamage":3,
+                  "skillCost":1,
+                  "skillType":1
+               },
+               {
+                  "id":6,
+                  "skillName":"Heavy Strike",
+                  "skillDamage":5,
+                  "skillCost":2,
+                  "skillType":1
+               },
+               {
+                  "id":7,
+                  "skillName":"Blade Furry",
+                  "skillDamage":8,
+                  "skillCost":6,
+                  "skillType":1
+               },
+               {
+                  "id":8,
+                  "skillName":"Double Strike",
+                  "skillDamage":10,
+                  "skillCost":7,
+                  "skillType":1
+               }
+            ]
+         },
+         {
+            "id":3,
+            "name":"Lowe",
+            "genderId":2,
+            "raceId":2,
+            "classId":2,
+            "origin":"Oreese",
+            "accId":3,
+            "bagList":[
+               {
+                  "id":3,
+                  "bagName":"Green Bag",
+                  "bagSize":24,
+                  "charId":3,
+                  "itemList":[
+                     {
+                        "id":6,
+                        "name":"Bread",
+                        "cost":5,
+                        "desc":"Fresh Baked Deliciousness",
+                        "bagId":3
+                     },
+                     {
+                        "id":7,
+                        "name":"Apple",
+                        "cost":3,
+                        "desc":"Right off the tree",
+                        "bagId":3
+                     }
+                  ]
+               },
+               {
+                  "id":4,
+                  "bagName":"Red Bag",
+                  "bagSize":48,
+                  "charId":3,
+                  "itemList":[
+                     {
+                        "id":8,
+                        "name":"Clock",
+                        "cost":16,
+                        "desc":"Tells time",
+                        "bagId":4
+                     },
+                     {
+                        "id":9,
+                        "name":"Dagger",
+                        "cost":36,
+                        "desc":"Quick and Silent",
+                        "bagId":4
+                     }
+                  ]
+               }
+            ],
+            "skillsList":[
+               {
+                  "id":1,
+                  "skillName":"Firebolt",
+                  "skillDamage":5,
+                  "skillCost":0,
+                  "skillType":2
+               },
+               {
+                  "id":2,
+                  "skillName":"Icebolt",
+                  "skillDamage":2,
+                  "skillCost":0,
+                  "skillType":2
+               },
+               {
+                  "id":3,
+                  "skillName":"Thunderbolt",
+                  "skillDamage":7,
+                  "skillCost":3,
+                  "skillType":2
+               },
+               {
+                  "id":4,
+                  "skillName":"Water Blast",
+                  "skillDamage":3,
+                  "skillCost":2,
+                  "skillType":2
+               }
+            ]
+         },
+         {
+            "id":4,
+            "name":"Thor",
+            "genderId":1,
+            "raceId":5,
+            "classId":4,
+            "origin":"Lokvor",
+            "accId":4,
+            "bagList":[
+               {
+                  "id":5,
+                  "bagName":"Legendary Bag",
+                  "bagSize":120,
+                  "charId":4,
+                  "itemList":[
+                     {
+                        "id":10,
+                        "name":"Life Potion",
+                        "cost":800,
+                        "desc":"Fully heals all health",
+                        "bagId":5
+                     },
+                     {
+                        "id":11,
+                        "name":"Life Potion",
+                        "cost":800,
+                        "desc":"Fully heals all health",
+                        "bagId":5
+                     },
+                     {
+                        "id":12,
+                        "name":"Life Potion",
+                        "cost":800,
+                        "desc":"Fully heals all health",
+                        "bagId":5
+                     },
+                     {
+                        "id":13,
+                        "name":"Mana Zone Potion",
+                        "cost":800,
+                        "desc":"Fully restores mana",
+                        "bagId":5
+                     },
+                     {
+                        "id":14,
+                        "name":"Mana Zone Potion",
+                        "cost":800,
+                        "desc":"Fully restores mana",
+                        "bagId":5
+                     },
+                     {
+                        "id":15,
+                        "name":"Legendary Hammer of Runok",
+                        "cost":1200,
+                        "desc":"Mischievous hammer long fogotton",
+                        "bagId":5
+                     },
+                     {
+                        "id":16,
+                        "name":"Legendary Sword of Balor",
+                        "cost":2000,
+                        "desc":"Sword of many secrets and stories",
+                        "bagId":5
+                     },
+                     {
+                        "id":22,
+                        "name":"Shield of Caleb",
+                        "cost":17640,
+                        "desc":"Shield that has protected against many demons and demigods",
+                        "bagId":5
+                     },
+                     {
+                        "id":23,
+                        "name":"Staff of Bard",
+                        "cost":14640,
+                        "desc":"Staff that is always surrounded by little fellas",
+                        "bagId":5
+                     },
+                     {
+                        "id":24,
+                        "name":"Spear of Juzulka",
+                        "cost":12640,
+                        "desc":"Spear of the master of spears, Juzulka",
+                        "bagId":5
+                     }
+                  ]
+               },
+               {
+                  "id":6,
+                  "bagName":"Obsidian Bag",
+                  "bagSize":89,
+                  "charId":4,
+                  "itemList":[
+                     {
+                        "id":17,
+                        "name":"Helm of Ludicrous",
+                        "cost":3000,
+                        "desc":"Helm that destroys lies",
+                        "bagId":6
+                     },
+                     {
+                        "id":18,
+                        "name":"Armor of the Golden Army",
+                        "cost":5000,
+                        "desc":"Armor that was worn by the few elites of the golden army",
+                        "bagId":6
+                     },
+                     {
+                        "id":19,
+                        "name":"Vangaurds of the Sleeping Dragon",
+                        "cost":8640,
+                        "desc":"Vangaurds made by the scales of the sleeping dragon",
+                        "bagId":6
+                     },
+                     {
+                        "id":20,
+                        "name":"Boots of Z",
+                        "cost":12640,
+                        "desc":"Boots from the legendary Z, unkown entity",
+                        "bagId":6
+                     },
+                     {
+                        "id":21,
+                        "name":"Pants of Goddess Vernord",
+                        "cost":18640,
+                        "desc":"Pants that has been blessed and build by goddess Vernord",
+                        "bagId":6
+                     }
+                  ]
+               }
+            ],
+            "skillsList":[
+               {
+                  "id":9,
+                  "skillName":"Hammer Slam",
+                  "skillDamage":10,
+                  "skillCost":8,
+                  "skillType":1
+               },
+               {
+                  "id":10,
+                  "skillName":"Hammer Throw",
+                  "skillDamage":9,
+                  "skillCost":6,
+                  "skillType":1
+               },
+               {
+                  "id":11,
+                  "skillName":"Healing Sprite",
+                  "skillDamage":7,
+                  "skillCost":2,
+                  "skillType":3
+               },
+               {
+                  "id":12,
+                  "skillName":"Lightning Strike",
+                  "skillDamage":21,
+                  "skillCost":15,
+                  "skillType":2
+               },
+               {
+                  "id":13,
+                  "skillName":"Flashing Storm",
+                  "skillDamage":40,
+                  "skillCost":18,
+                  "skillType":2
+               },
+               {
+                  "id":14,
+                  "skillName":"Oracle Light",
+                  "skillDamage":10,
+                  "skillCost":18,
+                  "skillType":3
+               },
+               {
+                  "id":15,
+                  "skillName":"Knowledge Insight",
+                  "skillDamage":2,
+                  "skillCost":1,
+                  "skillType":3
+               },
+               {
+                  "id":16,
+                  "skillName":"Pivotal Crucifex",
+                  "skillDamage":151,
+                  "skillCost":98,
+                  "skillType":1
+               }
+            ]
+         }
+      ]
+   }
+]

@@ -1,8 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { Action } from 'rxjs/internal/scheduler/Action';
-import { DOCUMENT, LocationStrategy } from '@angular/common';
-import { ResourceLoader } from '@angular/compiler';
-import { ReactiveFormsModule } from '@angular/forms';
+import { DOCUMENT} from '@angular/common';
+import { SharedDataService } from './../services/shared-data.service';
 
 @Component({
   selector: 'app-home',
@@ -11,21 +9,18 @@ import { ReactiveFormsModule } from '@angular/forms';
 })
 export class HomeComponent implements OnInit {
   username:string = sessionStorage.getItem("username");
-  refreshed:any = false;
-  count:number = 0;
+  display:any;
   constructor(
-    @Inject(DOCUMENT) private document: Document
+    @Inject(DOCUMENT) private document: Document,
+    private sharedData: SharedDataService
     ) { }
 
   ngOnInit(): void {
-    console.log("Entering Home typescript: ");
-    if(sessionStorage.getItem("username") == 'devon' && sessionStorage.getItem("password") == 'zhen'){
-    this.action();
-    }
-  }
-  action(){
-    document.getElementById("mainBody").style.visibility  = "visible";
-    document.getElementById("welcome").style.visibility  = "hidden";
-  }
+    console.log("Entering Home Component: ")
+    if(sessionStorage.getItem('account') === 'true')
+      this.display=true;
+    if(sessionStorage.getItem('account') === 'false' || sessionStorage.getItem('account') === "null")
+      this.display=false;
 
+  }
 }

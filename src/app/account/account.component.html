@@ -1,11 +1,11 @@
-<div class="container-fluid text-center" style="margin-top: 60px;">
-</div>
-<br>
+<div class="container-fluid text-center" style="margin-top: 60px;"></div>
+<div style="background-color: blanchedalmond; min-height:94vh">
 <div class="container-fluid text-center" >
+    <form [formGroup]="AccountForm" (ngSubmit)="onSubmit()">
+    <br>
     <div class="row" > 
         <div class="col-lg-2"></div>
         <div class="col-lg-8 ">
-
             <mat-card>
                 <div class="row">
                     <div class="col-md-12 text-center">
@@ -16,49 +16,83 @@
                 <div class="row">
                     <div class="col-lg-4"><mat-form-field class="full-width" >
                         <mat-label>Username</mat-label>
-                        <input matInput autocomplete="off">
+                        <input matInput formControlName="username" required autocomplete="off">
                         </mat-form-field>
                     </div>
                     <div class="col-lg-4">
                         <mat-form-field class="full-width" >
                             <mat-label>Password</mat-label>
-                            <input matInput autocomplete="off">
+                            <input matInput formControlName="password" required autocomplete="off">
                         </mat-form-field>
                     </div>
                     <div class="col-lg-4">
                         <mat-form-field class="full-width" >
                             <mat-label>Email</mat-label>
-                            <input matInput autocomplete="off">
-                        </mat-form-field>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4"><mat-form-field class="full-width" >
-                        <mat-label>Birthday</mat-label>
-                        <input matInput autocomplete="off">
-                        </mat-form-field>
-                    </div>
-                    <div class="col-lg-4">
-                        <mat-form-field class="full-width" >
-                            <mat-label>Country</mat-label>
-                            <input matInput autocomplete="off">
-                        </mat-form-field>
-                    </div>
-                    <div class="col-lg-4">
-                        <mat-form-field class="full-width" >
-                            <mat-label>Status</mat-label>
-                            <input matInput autocomplete="off">
+                            <input matInput formControlName="email" required autocomplete="off">
                         </mat-form-field>
                     </div>
                 </div>
                 <br>
                 <div class="row">
-                    <div class="col-lg-4"><a routerLink="/characters"><button mat-raised-button color="primary">Characters</button></a></div>
-                    <div class="col-lg-4"><a><button mat-raised-button color="primary">Update</button></a></div>
-                    <div class="col-lg-4"><a><button mat-raised-button color="primary">Reset</button></a></div>
+                    <div class="col-lg-4"><mat-form-field class="full-width" >
+                        <mat-label>First Name</mat-label>
+                        <input matInput formControlName="firstName" autocomplete="off">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-lg-4"><mat-form-field class="full-width" >
+                        <mat-label>Last Name</mat-label>
+                        <input matInput formControlName="lastName" autocomplete="off">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-lg-4">
+                        <mat-form-field class="full-width">
+                            <mat-label>Birthday</mat-label>
+                            <input matInput [matDatepicker]="picker" formControlName="birthday">
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+                    </div>
                 </div>
-
+                <br>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <mat-form-field class="full-width" >
+                            <mat-label>Country</mat-label>
+                            <input matInput formControlName="country" autocomplete="off">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-lg-4">
+                        <mat-form-field class="full-width" >
+                            <mat-label>Status</mat-label>
+                            <mat-select formControlName="statusId">
+                                <mat-option [value]="status.id" *ngFor="let status of statusTypes">
+                                    {{status.type}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-lg-4"><a routerLink="/characterslist"><button mat-raised-button color="primary" *ngIf="character">Characters</button></a></div>
+                    <div class="col-lg-4">
+                        <a><button mat-raised-button color="primary" *ngIf="register" id="update">Update</button></a>
+                        <a><button mat-raised-button color="primary" *ngIf="!register">Register</button></a>
+                    </div>
+                    <div class="col-lg-4"><a><button mat-raised-button (click)="AccountForm.reset()" id="reset">Reset</button></a></div>
+                </div>
             </mat-card>
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+    </form>
+    <br><br><br>
+    <div class="row text-center">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8" *ngIf="register">
+            <b>WARNING:</b> Removes EVERYTHING!!! (Characters and Account itself)
+            <br><br>
+            <button mat-raised-button (click)="deleteAccount()" id="Delete">Delete</button>
         </div>
         <div class="col-lg-2"></div>
     </div>

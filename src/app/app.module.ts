@@ -2,9 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { ShowHidePasswordModule } from 'ngx-show-hide-password';
 
 //Angular Specific
 import { MatButtonModule } from '@angular/material/button';
@@ -16,6 +18,10 @@ import { MatTableModule } from '@angular/material/table';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
+import { MatSelectModule } from '@angular/material/select';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatSnackBarModule } from '@angular/material/snack-bar'; 
 
 //Component Specifics
 import { HeaderComponent } from './header/header.component';
@@ -26,6 +32,8 @@ import { ItemsComponent } from './items/items.component';
 import { AccountComponent } from './account/account.component';
 import { LoginComponent } from './login/login.component';
 import { CharacterlistComponent } from './characterlist/characterlist.component';
+import { RegisterComponent } from './register/register.component';
+import { SkillsComponent } from './skills/skills.component'
 
 @NgModule({
   declarations: [
@@ -37,14 +45,16 @@ import { CharacterlistComponent } from './characterlist/characterlist.component'
     ItemsComponent,
     AccountComponent,
     LoginComponent,
-    CharacterlistComponent
+    CharacterlistComponent,
+    RegisterComponent,
+    SkillsComponent
   ],
   imports: [
-    BrowserModule,NgbModule,BrowserAnimationsModule,
+    BrowserModule,NgbModule,BrowserAnimationsModule,HttpClientModule,
     MatButtonModule,MatExpansionModule,MatFormFieldModule,MatCardModule,MatInputModule,MatTableModule,
-    MatDividerModule,MatDialogModule,MatBottomSheetModule,
-    FormsModule, ReactiveFormsModule,
-    AppRoutingModule
+    MatDividerModule,MatDialogModule,MatBottomSheetModule,MatSelectModule,MatSnackBarModule,
+    FormsModule, ReactiveFormsModule,MatDatepickerModule,MatNativeDateModule,
+    AppRoutingModule,ShowHidePasswordModule
   ],
   providers: [],
   bootstrap: [AppComponent]

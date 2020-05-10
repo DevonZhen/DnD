@@ -1,0 +1,83 @@
+{
+   "id":null,
+   "username":null,
+   "password":null,
+   "email":null,
+   "birthday":null,
+   "firstName":null,
+   "lastName":null,
+   "country":null,
+   "statusId":null,
+   "characterList":[
+      {
+         "id":4,
+         "name":"Thor",
+         "genderId":1,
+         "raceId":5,
+         "classId":4,
+         "origin":"Lokvor",
+         "accId":4,
+         "bagList":[
+
+         ],
+         "skillsList":[
+            {
+               "id":9,
+               "skillName":"Hammer Slam",
+               "skillDamage":10,
+               "skillCost":8,
+               "skillType":1
+            },
+            {
+               "id":10,
+               "skillName":"Hammer Throw",
+               "skillDamage":9,
+               "skillCost":6,
+               "skillType":1
+            },
+            {
+               "id":11,
+               "skillName":"Healing Sprite",
+               "skillDamage":7,
+               "skillCost":2,
+               "skillType":3
+            },
+            {
+               "id":12,
+               "skillName":"Lightning Strike",
+               "skillDamage":21,
+               "skillCost":15,
+               "skillType":2
+            },
+            {
+               "id":13,
+               "skillName":"Flashing Storm",
+               "skillDamage":40,
+               "skillCost":18,
+               "skillType":2
+            },
+            {
+               "id":14,
+               "skillName":"Oracle Light",
+               "skillDamage":10,
+               "skillCost":18,
+               "skillType":3
+            },
+            {
+               "id":15,
+               "skillName":"Knowledge Insight",
+               "skillDamage":2,
+               "skillCost":1,
+               "skillType":3
+            },
+            {
+               "id":16,
+               "skillName":"Pivotal Crucifex",
+               "skillDamage":151,
+               "skillCost":98,
+               "skillType":1
+            }
+         ]
+      }
+   ]
+}

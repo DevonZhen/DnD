@@ -1,142 +1,107 @@
-<div class="container-fluid text-center" style="margin-top: 60px;">
-</div>
-<br>
-<div class="container-fluid text-center" >
-    <div class="row" > 
-        <div class="col-lg-2"></div>
-        <div class="col-lg-8">
-            <mat-card class="test">
-                <div class="row">
-                    <div class="col-lg-1"><i class="fas fa-book" style="font-size: 80px;"></i></div>
-                    <div class="col-md-10 text-center">
-                        <h5 style="font-family: Asap Condensed; font-size: 30px;">Character Name</h5><br>
-                        <mat-form-field class="full-width" style="width: 400px; font-size: larger;">
-                            <input matInput autocomplete="off" style="text-align: center;">
-                        </mat-form-field>
-                    </div>   
-                    <div class="col-lg-1"><i class="fas fa-book" style="font-size: 80px;"></i></div>                  
+<div class="container-fluid text-center" style="margin-top: 60px;"></div>
+<div style="background-color: blanchedalmond; min-height:94vh">
+    <div class="container-fluid text-center" >
+        <br>
+        <form [formGroup]="characterForm" (ngSubmit)="onSubmit()">
+            <div class="row" > 
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                    <mat-card class="test">
+                        <div class="row">
+                            <div class="col-lg-1"><i class="fas fa-book" style="font-size: 80px;"></i></div>
+                            <div class="col-md-10 text-center">
+                                <h5 style="font-family: Asap Condensed; font-size: 30px;">Character Name</h5><br>
+                                <mat-form-field class="full-width" style="width: 400px; font-size: larger;">
+                                    <input matInput formControlName="name" autocomplete="off" style="text-align: center;" >
+                                </mat-form-field>
+                            </div>   
+                            <div class="col-lg-1"><i class="fas fa-book" style="font-size: 80px;"></i></div>                  
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <mat-form-field class="full-width" >
+                                    <mat-label>Gender</mat-label>
+                                    <mat-select formControlName="gender" autocomplete="off">
+                                      <mat-option [value]="gender.id" *ngFor="let gender of genders">
+                                          {{gender.type}}
+                                      </mat-option>
+                                  </mat-select>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-lg-3">
+                                <mat-form-field class="full-width" >
+                                    <mat-label>Race</mat-label>
+                                    <mat-select formControlName="race" autocomplete="off">
+                                      <mat-option [value]="race.id" *ngFor="let race of races">
+                                          {{race.type}}
+                                      </mat-option>
+                                  </mat-select>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-lg-3">
+                                <mat-form-field class="full-width" >
+                                    <mat-label>Class</mat-label>
+                                    <mat-select formControlName="class" autocomplete="off">
+                                      <mat-option [value]="class.id" *ngFor="let class of classes">
+                                          {{class.type}}
+                                      </mat-option>
+                                  </mat-select>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-lg-3">
+                                <mat-form-field class="full-width" >
+                                    <mat-label>Origin</mat-label>
+                                    <input matInput formControlName="origin" autocomplete="off">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-lg-4"><a routerLink="/bag"><button mat-raised-button color="primary">Bags</button></a></div>
+                            <div class="col-lg-4"><a routerLink="/items"><button mat-raised-button color="primary">Items</button></a></div>
+                            <div class="col-lg-4"><a routerLink="/skills"><button mat-raised-button color="primary">Skills</button></a></div>
+                        </div>
+                    </mat-card>
                 </div>
-                <hr>
-                <div class="row">
-                    <div class="col-lg-3">
-                        <mat-form-field class="full-width" >
-                            <mat-label>Gender</mat-label>
-                            <input matInput autocomplete="off">
-                        </mat-form-field>
-                    </div>
-                    <div class="col-lg-3">
-                        <mat-form-field class="full-width" >
-                            <mat-label>Race</mat-label>
-                            <input matInput autocomplete="off">
-                        </mat-form-field>
-                    </div>
-                    <div class="col-lg-3">
-                        <mat-form-field class="full-width" >
-                            <mat-label>Class</mat-label>
-                            <input matInput autocomplete="off">
-                        </mat-form-field>
-                    </div>
-                    <div class="col-lg-3">
-                        <mat-form-field class="full-width" >
-                            <mat-label>Origin</mat-label>
-                            <input matInput autocomplete="off">
-                        </mat-form-field>
-                    </div>
-                </div>
-                <hr>
-                <div class="row">
-                    <div class="col-lg-4"><a routerLink="/bag"><button mat-raised-button color="primary">Bags</button></a></div>
-                    <div class="col-lg-4"><a routerLink="/items"><button mat-raised-button color="primary">Items</button></a></div>
-                    <div class="col-lg-4"><a routerLink="/skills"><button mat-raised-button color="primary">Skills</button></a></div>
-                </div>
-               
-
-
-
-            </mat-card>
-        </div>
-        <div class="col-lg-2"></div>
-    </div>
-
-    <br>
-    <div clas="row text-center">
-        <h3>Bag List</h3>
-    </div>
-    <br>
-    
-    <div class="row" > 
-        <div class="col-lg-2"></div>
-        <div class="col-lg-4">
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                  <mat-panel-title>
-                    Bag 1
-                  </mat-panel-title>
-                </mat-expansion-panel-header>
-                <ul class="list-group">
-                    <li class="list-group-item">Item 1</li>
-                    <li class="list-group-item">Item 2</li>
-                    <li class="list-group-item">Item 3</li>
-                    <li class="list-group-item">Item 4</li>
-                    <li class="list-group-item">Item 5</li>
-                </ul>
-            </mat-expansion-panel>
+                <div class="col-lg-2"></div>
+            </div>
             <br>
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                  <mat-panel-title>
-                    Bag 3
-                  </mat-panel-title>
-                </mat-expansion-panel-header>
-                <ul class="list-group">
-                    <li class="list-group-item">Item 1</li>
-                    <li class="list-group-item">Item 2</li>
-                    <li class="list-group-item">Item 3</li>
-                    <li class="list-group-item">Item 4</li>
-                    <li class="list-group-item">Item 5</li>
-                </ul>
-            </mat-expansion-panel>
-            <br>
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                  <mat-panel-title>
-                    Bag 5
-                  </mat-panel-title>
-                </mat-expansion-panel-header>
-                <ul class="list-group">
-                    <li class="list-group-item">Item 1</li>
-                    <li class="list-group-item">Item 2</li>
-                    <li class="list-group-item">Item 3</li>
-                    <li class="list-group-item">Item 4</li>
-                    <li class="list-group-item">Item 5</li>
-                </ul>
-            </mat-expansion-panel>
-        </div>
-        <div class="col-lg-4">
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                  <mat-panel-title>
-                    Bag 2
-                  </mat-panel-title>
-                </mat-expansion-panel-header>
-                <p>This is the primary content of the panel.</p>
-              </mat-expansion-panel>
-              <br>
-              <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                  <mat-panel-title>
-                    Bag 4
-                  </mat-panel-title>
-                </mat-expansion-panel-header>
-                <ul class="list-group">
-                    <li class="list-group-item">Item 1</li>
-                    <li class="list-group-item">Item 2</li>
-                    <li class="list-group-item">Item 3</li>
-                    <li class="list-group-item">Item 4</li>
-                    <li class="list-group-item">Item 5</li>
-                </ul>
-            </mat-expansion-panel>
-        </div>
-        <div class="col-lg-2"></div>
+        </form>
     </div>
-</div>
+    <div class="container-fluid">
+        <div class="text-center"><h1>Bag List</h1></div><br>
+          <div class="row" > 
+              <div class="col-lg-2"></div>
+              <div class="col-lg-8">
+                <div class="row">
+                    <ng-container *ngFor="let character of account.characterList">
+                        <ng-container *ngFor="let bag of character.bagList">
+                            <div class="col-lg-6">
+                                <mat-expansion-panel>
+                                  <mat-expansion-panel-header>
+                                    <mat-panel-title>{{bag.bagName}}</mat-panel-title>
+                                  </mat-expansion-panel-header>
+                                  <ul class="list-group">
+                                    <ng-container *ngFor="let item of bag.itemList">
+                                      <li class="list-group-item">
+                                        <div class="row">
+                                          <div class="col-lg-6"><h5>{{item.name}}</h5></div>
+                                          <div class="col-lg-6 text-right"><h5>{{item.cost}}</h5></div>
+                                        </div>
+                                        <div class="row">
+                                          <div class="col-lg-12">{{item.desc}}</div>
+                                        </div>
+                                      </li>
+                                    </ng-container>
+                                  </ul>
+                                </mat-expansion-panel>
+                                <br>
+                              </div>
+                        </ng-container>
+                    </ng-container>
+                </div>
+              </div>
+              <div class="col-lg-2"></div>
+          </div>
+    </div>
