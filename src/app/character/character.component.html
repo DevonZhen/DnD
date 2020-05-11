@@ -58,9 +58,11 @@
                         </div>
                         <hr>
                         <div class="row">
-                            <div class="col-lg-4"><a routerLink="/bag"><button mat-raised-button color="primary">Bags</button></a></div>
-                            <div class="col-lg-4"><a routerLink="/items"><button mat-raised-button color="primary">Items</button></a></div>
-                            <div class="col-lg-4"><a routerLink="/skills"><button mat-raised-button color="primary">Skills</button></a></div>
+                            <div class="col-lg-1"></div>
+                            <div class="col-lg-3"><a routerLink="/skills"><button mat-raised-button color="primary">Skills</button></a></div>
+                            <div class="col-lg-4"><button mat-raised-button color="primary" *ngif="!nothing">Create</button></div>
+                            <div class="col-lg-3"><a routerLink="/skills"><button mat-raised-button color="primary">Update</button></a></div>
+                            <div class="col-lg-1"></div>
                         </div>
                     </mat-card>
                 </div>
@@ -69,6 +71,7 @@
             <br>
         </form>
     </div>
+    <!-- Bag List -->
     <div class="container-fluid">
         <div class="text-center"><h1>Bag List</h1></div><br>
           <div class="row" > 

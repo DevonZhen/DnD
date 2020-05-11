@@ -9,7 +9,11 @@
                     <ng-container *ngFor="let acc of account.characterList">
                         <div class="col-lg-4">
                             <mat-card style="width: 400px;">
-                                <mat-card-title style="font-family:Odibee Sans; font-size: xx-large;" ><a [routerLink]="['/character', acc.name]">{{ acc.name}}</a></mat-card-title>
+                                <div class="row text-center">
+                                    <div class="col-lg-2"></div>
+                                    <div class="col-lg-8"><mat-card-title style="font-family:Odibee Sans; font-size: xx-large;" ><a [routerLink]="['/character', acc.name]">{{ acc.name}}</a></mat-card-title></div>
+                                    <div class="col-lg-2"><a href="https://google.com"><i class="fas fa-times-circle" style="color: red;"></i></a></div>
+                                </div>
                                 <a [routerLink]="['/character', acc.name]"><img mat-card-image src="assets/images/profile.jpg"style="width: 50%; height: 300px; border-radius: 15px;"></a><br>
                                 <mat-card-actions>
                                     <a [routerLink]="['/skills', acc.name]"><button class="btn btn-success" type="button">Skills</button></a> &nbsp;&nbsp;&nbsp;&nbsp;
