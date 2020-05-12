@@ -1,6 +1,197 @@
 <div class="container-fluid text-center" style="margin-top: 60px;"></div>
 <div style="background-color: blanchedalmond; min-height:94vh">
+  <!-- <br>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-3"><button mat-raised-button (click)="openDialog()">Pick one</button></div>
+      <div class="col-lg-3">
+        <mat-card>
+          Create A Bag: <br>
+          <mat-form-field>
+            <mat-label>Bag Name</mat-label>
+            <input matInput autocomplete="off">
+          </mat-form-field> &nbsp;&nbsp;
+        <button mat-raised-button color="primary" (click)="addBag()">Create Bag</button>
+      </mat-card>
+      </div>
+      <div class="col-lg-3"></div>
+      <div class="col-lg-3"></div>
+    </div>
+  </div> -->
+  <!-- Version 1 : Expansion Panel -->
+  <form [formGroup]="bagForm">
+  <div class="container-fluid" formArrayName="bags">
+    <br>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-3"><button mat-raised-button (click)="openDialog()">Pick one</button></div>
+        <div class="col-lg-3">
+          <mat-card>
+            Create A Bag: <br>
+            <mat-form-field>
+              <mat-label>Bag Name</mat-label>
+              <input matInput autocomplete="off">
+            </mat-form-field> &nbsp;&nbsp;
+          <button mat-raised-button color="primary" (click)="addBag()">Create Bag</button>
+        </mat-card>
+        </div>
+        <div class="col-lg-3"></div>
+        <div class="col-lg-3"></div>
+      </div>
+    </div>
+    <br><br>
+    <!--Version 2: Normal Mat Card Style-->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-3 text-right"><i class="fas fa-edit"></i></div>
+      <div class="col-lg-6">
+        <mat-card>
+        <!-- Bag Name Section-->
+        <div class="row">
+          <div class="col-lg-10 text-left"><h4>Bag Name</h4></div>
+          <div class="col-lg-2 text-right"><a href="https://google.com"><i class="material-icons" style="color: red;">remove_circle</i></a></div>
+        </div><br>
+        <!--Item Name Section-->
+        <div class="row">
+          <div class="col-lg-1"></div>
+          <!-- Each Item -->
+          <div class="col-lg-10" >
+            <div class="row">
+              <div class="col-lg-6"><h5>Name</h5></div>
+              <div class="col-lg-5"><h5>Cost</h5></div>
+              <div class="col-lg-1"><a><i class="fas fa-minus"></i></a></div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">Desc</div>
+            </div>
+            <hr style="height: 1px; background: linear-gradient(to right, #2a830e, #10ec2d);">
+          </div>
+          <div class="col-lg-1"></div>
+          <br> 
+        </div>
+        <div class="row">
+          <div class="col-lg-1"></div>
+          <!-- Each Item -->
+          <div class="col-lg-10" >
+            <div class="row">
+              <div class="col-lg-6"><h5>Name</h5></div>
+              <div class="col-lg-5"><h5>Cost</h5></div>
+              <div class="col-lg-1"><a><i class="fas fa-minus"></i></a></div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">Desc</div>
+            </div>
+            <hr style="height: 1px; background: linear-gradient(to right, #2a830e, #10ec2d);">
+          </div>
+          <div class="col-lg-1"></div>
+          <br> 
+        </div>
+        <div class="row">
+          <div class="col-lg-1"></div>
+          <!-- Each Item -->
+          <div class="col-lg-10" >
+            <div class="row">
+              <div class="col-lg-6"></div>
+              <div class="col-lg-5"></div>
+              <div class="col-lg-1"><a><i class="fas fa-plus"></i></a></div>
+            </div>
+          </div>
+          <div class="col-lg-1"></div>
+          <br> 
+        </div>
+      </mat-card>
+      </div>
+      <div class="col-lg-3"></div>
+    </div>
+  </div>
+  <br><br>
+  <!-- Looping Bags -->
+  <div class="row" *ngFor="let bag of bagForm.get('bags')['controls']; let i=index" [formGroupName]="i">
+    <div class="col-lg-3 text-right"><i class="fas fa-edit"></i></div>
+    <div class="col-lg-6">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title><h4>Bag Name</h4></mat-panel-title>
+        </mat-expansion-panel-header>
+        <ul class="list-group">
+          <!-- Loop-able Section-->
+            <li class="list-group-item">
+              <div class="row">
+                <div class="col-lg-6"><h5>Name</h5></div>
+                <div class="col-lg-5"><h5>Cost</h5></div>
+                <div class="col-lg-1"><a><i class="fas fa-minus"></i></a></div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12">Desc</div>
+              </div>
+              <hr style="height: 1px; background: linear-gradient(to right, #2a830e, #10ec2d);">
+              <div class="row">
+                <div class="col-lg-6"></div>
+                <div class="col-lg-5"></div>
+                <div class="col-lg-1"><a><i class="fas fa-plus"></i></a></div>
+              </div>
+            </li>
+          <!-- Loop-able Above Section-->
+        </ul>
+      </mat-expansion-panel>
+    </div>
+    <div class="col-lg-3"> <a (click)="removeBag(i)"><i class="material-icons" style="color: red; ">remove_circle</i></a></div>
+    <br>&nbsp;
+  </div>
+</div>
+</form>
 
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container-fluid text-center">
+
+
+    <form [formGroup]="bagForm"><br>
+    <br><br><br><br>
+
+    <button mat-raised-button color="primary"(click)="addBag()" >Add Bag</button>
+    <hr style="height: 1px; background: linear-gradient(to right, #2a830e, #10ec2d);">
+
+    <div formArrayName="bags">
+      <div class="bags" *ngFor="let bag of bagForm.get('bags');let bagIndex = index"[formGroupName]="bagIndex">
+        Bag Name <input matInput formControlName="bagName" required autocomplete="off">
+          <button (click)="removeBag(bagIndex)">x</button>
+        <hr/>
+        <button type="button" (click)="addItem(bag)">Add Item</button>
+        <div formArrayName="items">
+          <div class="items" *ngFor="let item of bag.get('items'); let itemIndex = index" [formGroupName]="itemIndex">
+            <label>Item Name <input formControlName="name"/>
+              <button mat-raised-button color="primary"(click)="removeItem(bag, itemIndex)">X</button>
+              </label>
+            <label>Item Desc <input formControlName="desc"/></label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </form>
+</div>
+
+
+
+  {{ this.bagForm.value | json }}
+ -->
+
+
+
+<!-- 
   <div class="container-fluid">
     <h1 style="text-align: center;">Bag List</h1><br>
     <div class="row">
@@ -10,7 +201,7 @@
           <div class="col-lg-4">
             <mat-expansion-panel>
               <mat-expansion-panel-header>
-                <mat-panel-title>Title</mat-panel-title>
+                <mat-panel-title>Bag Title</mat-panel-title>
               </mat-expansion-panel-header>
               <ul class="list-group">
                   <li class="list-group-item">
@@ -31,16 +222,15 @@
       </div>
       <div class="col-lg-2"></div>
     </div>
-  </div>
+  </div> -->
 
  
   
   
   
   
-<!--   
   
-  <button mat-raised-button (click)="openDialog()">Pick one</button> -->
+
  
 
 
@@ -103,4 +293,22 @@
       </li>
   </ul>
 </mat-expansion-panel>
-<br> -->
+<br> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->

@@ -125,17 +125,17 @@ export class BagComponent implements OnInit {
     })
  }
 
-  addBag(){
-    (this.bagForm.get("bags") as FormArray).push(this.bags);
+ addBag(){
+  (this.bagForm.get("bags") as FormArray).push(this.bags);
   }
-  removeBag(){
-
+  removeBag(index){
+    (this.bagForm.get("bags") as FormArray).removeAt(index);
   }
   addItem(bag){
     bag.get("items").push(this.items);
   }
-  removeItem(){
-
+  removeItem(bag, index){
+    bag.get("items").removeAt(index);
   }
 
 }
