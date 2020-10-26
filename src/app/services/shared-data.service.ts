@@ -14,9 +14,4 @@ export class SharedDataService {
     this.loginStatus = new BehaviorSubject('');
    }
 
-  //Account Login Status
-
-  //Display Status
-
-  //
 }

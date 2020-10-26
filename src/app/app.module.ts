@@ -23,18 +23,20 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTableModule } from '@angular/material/table';
 import { TextFieldModule } from '@angular/cdk/text-field'; 
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 //Component Specifics
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { CharacterComponent } from './character/character.component';
-import { BagComponent, DialogExample } from './bag/bag.component';
+import { BagComponent} from './bag/bag.component';
 import { ItemsComponent } from './items/items.component';
 import { AccountComponent } from './account/account.component';
 import { LoginComponent } from './login/login.component';
 import { CharacterlistComponent } from './characterlist/characterlist.component';
 import { RegisterComponent } from './register/register.component';
 import { SkillsComponent } from './skills/skills.component';
+import { DialogBagComponent } from './dialog-bag/dialog-bag.component';
 
 
 @NgModule({
@@ -49,13 +51,13 @@ import { SkillsComponent } from './skills/skills.component';
     LoginComponent,
     CharacterlistComponent,
     RegisterComponent,
-    SkillsComponent,DialogExample
+    SkillsComponent, DialogBagComponent
   ],
   imports: [
     BrowserModule,NgbModule,BrowserAnimationsModule,HttpClientModule,
     MatButtonModule,MatExpansionModule,MatFormFieldModule,MatCardModule,MatInputModule,MatTableModule,
     MatDividerModule,MatDialogModule,MatBottomSheetModule,MatSelectModule,MatSnackBarModule,
-    FormsModule, ReactiveFormsModule,MatDatepickerModule,MatNativeDateModule,
+    FormsModule, ReactiveFormsModule,MatDatepickerModule,MatNativeDateModule,MatTooltipModule,
     AppRoutingModule,ShowHidePasswordModule,TextFieldModule
   ],
   entryComponents: [],

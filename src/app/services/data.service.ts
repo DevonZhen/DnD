@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class DataService {
 
-  hostURL:string = "http://localhost:8080/Character";
+  hostURL:string = "http://devonzhen.com/Character";
 
   constructor(private http: HttpClient) { }
 
@@ -22,7 +22,7 @@ export class DataService {
   // }
 
   //Collects Data from JSON <personall> or from DB
-  geAccountAll(): Observable<any>{
+  getAccountAll(): Observable<any>{
     return this.http.get("assets/AccountAll.json");
     // return this.http.get(this.hostURL+"/AccountAll");
   }
@@ -97,19 +97,33 @@ export class DataService {
   /*----------------------------------------------------*/
 
   //New Account
-  newAccount(formData: any): Observable<any>{
+  postAccount(formData: any): Observable<any>{
     return this.http.post(this.hostURL+"/PostAccount",formData);
   }
 
   //New Character
   newCharacter(formData: any): Observable<any>{
-    // return this.http.get(this.hostURL+"/newCharacter/",formData);
+    // return this.http.get(this.hostURL+"/PostCharacter/",formData);
     return null;
+  }
+
+  //Update Bags
+  updateBags(formData: any): Observable<any>{
+    return this.http.post(this.hostURL+"/UpdateBag",formData);
+  }
+
+  //Post Character
+  postCharacter(formData: any): Observable<any>{
+    return this.http.post(this.hostURL+"/PostCharacter",formData);
+  }
+
+  //Delete Character
+  deleteCharacter(charId: any): Observable<any>{
+    return this.http.delete(this.hostURL+"/DeleteCharacter/"+charId);
   }
 
   //Remove Account
   deleteAccount(id: string): Observable<any>{
     return this.http.delete(this.hostURL+"/DeleteAccount/"+id);
-    // return null;
   }
 }

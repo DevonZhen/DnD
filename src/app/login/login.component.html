@@ -18,7 +18,7 @@
                     <div class="row" style="text-align: center;">
                         <div class="col-sm-2"></div>
                         <div class="col-sm-8" >
-                            <mat-form-field class="full-width" id="username">
+                            <mat-form-field  id="username" style="width: 100%;">
                                 <mat-label>Username</mat-label>
                                 <input matInput  formControlName="username" autocomplete="off">
                             </mat-form-field>
@@ -28,7 +28,7 @@
                     <div class="row" style="text-align: center;">
                         <div class="col-sm-2"></div>
                         <div class="col-sm-8">
-                            <mat-form-field class="full-width" id="password">
+                            <mat-form-field  id="password" style="width: 100%;">
                                 <input matInput id="password" type="password" placeholder="Password" formControlName="password" autocomplete="off" showHideInput >
                                 <i class="material-icons" matSuffix showHideTrigger="password" [showHideStatus]="{ materialIcon: true, id: 'password' }"></i>
                             </mat-form-field> 
@@ -54,4 +54,17 @@
             </div>    
         </div>
     </form>
+
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4 text-center">
+            <br>
+            <h5>Test Accounts:</h5>
+            
+            <b>Username</b>&nbsp;&nbsp;&nbsp; <b>Password</b><br>
+            Devonzhen &nbsp;&nbsp;&nbsp; devon123 <br>
+            Jimmyzhen &nbsp;&nbsp;&nbsp;&nbsp; jimmy123<br>
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
 </div>

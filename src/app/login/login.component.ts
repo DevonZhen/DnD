@@ -18,13 +18,20 @@ export class LoginComponent implements OnInit {
     private formBuilder: FormBuilder,
     private restService: RestfulService,
     private sharedData: SharedDataService,
-    private snack: MatSnackBar
+    private snack: MatSnackBar,
   ) { }
 
   LoginForm(){
     this.loginForm=this.formBuilder.group({
       username: ['', Validators.required],
       password: ['', Validators.required]
+    });
+  }
+
+  loadForm(){
+    this.loginForm.setValue({
+      username: "Devonzhen",
+      password: "devon123"
     });
   }
 
@@ -66,6 +73,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.LoginForm();
+    this.loadForm();
   }
 
   onSubmit() {

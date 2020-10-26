@@ -1,0 +1,79 @@
+<form [formGroup]="bagForm">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-5">
+            <mat-card>
+              Create A Bag: <br>
+              <mat-form-field>
+                <mat-label>Bag Name</mat-label>
+                <input matInput autocomplete="off">
+              </mat-form-field> &nbsp;&nbsp;
+            <button mat-raised-button color="primary" (click)="addBag()">Create Bag</button>
+          </mat-card>
+          </div>
+          <div class="col-lg-5 text-center"><button mat-raised-button color="primary"  (click)="update()">Update</button></div>
+          <div class="col-lg-1"><i class="far fa-times-circle"></i></div>
+        </div>
+        <br><br>
+        <!-- Bags -->
+        <div formArrayName="bags">
+          <div class="row" *ngFor="let bag of bagForm.get('bags')['controls']; let i=index" [formGroupName]="i">
+            <div class="col-lg-1 text-right"><i class="fas fa-edit" id="edit"></i></div>
+            <div class="col-lg-10">
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      <h4>Bag Name</h4>
+                      <!-- <mat-form-field>
+                        <mat-label>Bag Name</mat-label>
+                        <input matInput  autocomplete="off">
+                      </mat-form-field>-->
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <ul class="list-group">
+                    <!-- Loop-able Section-->
+                    <div formArrayName="items">
+                      <div class="item" *ngFor="let item of bag.get('items')['controls']; let x=index" [formGroupName]="x">
+                      <li class="list-group-item">
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <mat-form-field>
+                              <mat-label>Name</mat-label>
+                              <input matInput formControlName="name" autocomplete="off">
+                            </mat-form-field>
+                          </div>
+                          <div class="col-lg-5">
+                            <mat-form-field>
+                              <mat-label>Cost</mat-label>
+                              <input matInput formControlName="cost" autocomplete="off">
+                            </mat-form-field>
+                          </div>
+                          <div class="col-lg-1"><a  (click)="removeItem(bag, x)"><i class="fas fa-minus"></i></a></div>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-12" style="font-size: 15px;">
+                            <mat-form-field  style="width: 450px;">
+                              <mat-label>Description</mat-label>
+                              <textarea matInput formControlName="desc" autocomplete="off"></textarea>
+                            </mat-form-field>
+                          </div>
+                        </div>
+                        <hr style="height: 1px; background: linear-gradient(to right, #2a830e, #10ec2d);">
+                      </li>
+                    </div>   
+                    </div>  
+                    <div class="row">
+                      <div class="col-lg-6"></div>
+                      <div class="col-lg-5"></div>
+                      <div class="col-lg-1"><a (click)="addItem(bag)"><i class="fas fa-plus"></i></a></div>
+                    </div>       
+                  </ul>
+                </mat-expansion-panel>
+              </div>
+              <div class="col-lg-1"> <a (click)="removeBag(i)"><i class="material-icons" style="color: red;" id="remove">remove_circle</i></a></div>
+              <br>&nbsp;
+          </div>
+        </div>
+  </div>
+</form>

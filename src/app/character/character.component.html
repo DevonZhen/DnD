@@ -8,14 +8,14 @@
                 <div class="col-lg-8">
                     <mat-card class="test">
                         <div class="row">
-                            <div class="col-lg-1"><i class="fas fa-book" style="font-size: 80px;"></i></div>
-                            <div class="col-md-10 text-center">
+                            <div class="col-lg-2"><i class="fas fa-book" style="font-size: 400%;"></i></div>
+                            <div class="col-md-8 text-center">
                                 <h5 style="font-family: Asap Condensed; font-size: 30px;">Character Name</h5><br>
                                 <mat-form-field class="full-width" style="width: 400px; font-size: larger;">
                                     <input matInput formControlName="name" autocomplete="off" style="text-align: center;" >
                                 </mat-form-field>
                             </div>   
-                            <div class="col-lg-1"><i class="fas fa-book" style="font-size: 80px;"></i></div>                  
+                            <div class="col-lg-2"><i class="fas fa-book" style="font-size: 400%;"></i></div>                  
                         </div>
                         <hr>
                         <div class="row">
@@ -58,11 +58,17 @@
                         </div>
                         <hr>
                         <div class="row">
-                            <div class="col-lg-1"></div>
-                            <div class="col-lg-3"><a routerLink="/skills"><button mat-raised-button color="primary">Skills</button></a></div>
-                            <div class="col-lg-4"><button mat-raised-button color="primary" *ngif="!nothing">Create</button></div>
-                            <div class="col-lg-3"><a routerLink="/skills"><button mat-raised-button color="primary">Update</button></a></div>
-                            <div class="col-lg-1"></div>
+                            <div class="col-lg-3"></div>
+                            <!-- <div class="col-lg-3">
+                                <a [routerLink]="['/skills', name]"><button mat-raised-button color="primary" *ngIf="charDisplay">Skills</button></a>
+                                <a routerLink="/skills"><button mat-raised-button color="primary" *ngIf="charDisplay">Skills</button></a>
+                            </div> -->
+                            <!-- <div class="col-lg-4"></div> -->
+                            <div class="col-lg-6">
+                                <button mat-raised-button color="primary" (click)="loadAccountInfo()" *ngIf="charDisplay">Update</button>
+                                <button mat-raised-button color="primary" (click) ="loadAccountInfo()" *ngIf="!charDisplay">Create</button>
+                            </div>
+                            <div class="col-lg-3"></div>
                         </div>
                     </mat-card>
                 </div>
@@ -71,15 +77,16 @@
             <br>
         </form>
     </div>
+    <div class="container-fluid text-center"><button mat-raised-button (click)="BagsDialog(account.characterList)" *ngIf="charDisplay">Edit Bags</button></div><br>
     <!-- Bag List -->
-    <div class="container-fluid">
+    <div class="container-fluid" *ngIf="charDisplay">
         <div class="text-center"><h1>Bag List</h1></div><br>
           <div class="row" > 
               <div class="col-lg-2"></div>
               <div class="col-lg-8">
                 <div class="row">
                     <ng-container *ngFor="let character of account.characterList">
-                        <ng-container *ngFor="let bag of character.bagList">
+                        <ng-container *ngFor="let bag of character.bags">
                             <div class="col-lg-6">
                                 <mat-expansion-panel>
                                   <mat-expansion-panel-header>

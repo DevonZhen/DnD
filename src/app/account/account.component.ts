@@ -98,8 +98,9 @@ export class AccountComponent implements OnInit {
     );
   }
   
-  registerAccount(formValue: any){
-    this.restService.newAccount(formValue).subscribe(
+  //Will Create or Update Account
+  postAccount(formValue: any){
+    this.restService.postAccount(formValue).subscribe(
       data =>{
         console.log("Account "+data);
         if (data) {
@@ -147,6 +148,6 @@ export class AccountComponent implements OnInit {
   onSubmit(){
     console.log("Account Component Entering...")
     console.log("Form Data: "+JSON.stringify(this.AccountForm.value))
-    this.registerAccount(this.AccountForm.value);
+    this.postAccount(this.AccountForm.value);
   }
 }

@@ -7,3 +7,7 @@ mat-card {
     border-bottom-style: solid;
     border-bottom-color: coral;
 }
+button{
+    text-decoration: none;
+    outline: none;
+}

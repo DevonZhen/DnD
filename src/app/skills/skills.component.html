@@ -1,9 +1,15 @@
 <div class="container-fluid text-center" style="margin-top: 60px;"></div>
 <div style="background-color: blanchedalmond; min-height:94vh">
 <div class="container-fluid">
-    <ng-container *ngFor="let ch of events.characterList">
-        <h1 class="text-center">{{ch.name}}'s Skills</h1>
-    </ng-container>
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <ng-container *ngFor="let ch of events.characterList">
+                <h1 class="text-center">{{ch.name}}'s Skills</h1>
+            </ng-container>
+        </div>
+        <div class="col-lg-3 text-center" ><br><a matTooltip="Return to Character List" routerLink="/characterslist"><i class="fas fa-arrow-circle-left fa-2x"></i></a></div>
+    </div>
     <div class="row">
         <div class="col-lg-2"></div>
         <div class="col-lg-8">
